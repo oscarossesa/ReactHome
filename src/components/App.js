@@ -21,8 +21,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header 
-          title='Oscar' 
-          items={items} 
+          title='Dashboard Sigfe ' 
+          // items={items} 
         />
         <Content body={children} />
         <Footer />

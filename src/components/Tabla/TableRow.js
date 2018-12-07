@@ -8,7 +8,6 @@ class TableRow extends Component {
 
     render() {
         let { item } = this.props;
-        console.log(item);
         return (
             <tr className={ item.Estado == 3 ? "alert alert-success" : item.Estado == 1 ? "alert alert-warning" :  item.Estado == -2 ? "alert alert-info" : ""  }    >
                 <th scope="row"> { item.i }</th>
@@ -18,7 +17,7 @@ class TableRow extends Component {
                 <td>{ item.Estado }</td>
                 <td>{ item.Folio }</td>
                 <td width="10%">
-                    { item.Estado == 2 && <p className="alert alert-danger" > {item.mensaje}      </p> }
+                    { item.Estado == 2 && <p className="alert alert-danger" >{item.mensaje}</p> }
                 </td>
             </tr>);
     }

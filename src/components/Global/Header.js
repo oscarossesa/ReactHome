@@ -14,7 +14,7 @@ class Header extends Component {
   };
 
   render() {
-    console.log(this.props);
+    //console.log(this.props);
 
     const { title, items } = this.props;
 
@@ -26,6 +26,8 @@ class Header extends Component {
         <header className="Logo">
           <img src={logo} alt="logo" />
           <h2>{title}</h2>
+
+          {/*           
           <ul className="Menu">
             {
               items && items.map(
@@ -33,6 +35,8 @@ class Header extends Component {
               )
             }
           </ul>
+          */}
+
         </header>
       </div>
     );

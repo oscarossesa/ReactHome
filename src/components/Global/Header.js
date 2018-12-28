@@ -26,13 +26,13 @@ class Header extends Component {
         <header className="Logo">
           <img src={logo} alt="logo" />
           <h2>{title}</h2>
-          <ul className="Menu">
+          {/* <ul className="Menu">
             {
               items && items.map(
                 (item, key) => <li key={key}><Link to={item.url}>{item.title}</Link></li>
               )
             }
-          </ul>
+          </ul> */}
         </header>
       </div>
     );

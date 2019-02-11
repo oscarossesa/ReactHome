@@ -20,10 +20,10 @@ class App extends Component {
     
     return (
       <div className="App">
-        <Header 
+        {/* <Header 
           title='Dashboard SIGFE' 
           items={items} 
-        />
+        /> */}
         <Content body={children} />
         <Footer />
       </div>

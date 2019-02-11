@@ -26,7 +26,6 @@ class Header extends Component {
         <header className="Logo">
           <img src={logo} alt="logo" />
           <h2>{title}</h2>
-
           {/*           
           <ul className="Menu">
             {
@@ -36,7 +35,6 @@ class Header extends Component {
             }
           </ul>
           */}
-
         </header>
       </div>
     );

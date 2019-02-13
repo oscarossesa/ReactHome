@@ -18,6 +18,8 @@ class TableRow extends Component {
                                 "alert alert-warning" :  
                                 item.Estado == -2 ? 
                                     "alert alert-info" : ""  }    >
+                <td>{ item.RespuestaSigfeJson.detalles.compromiso[0].documentos.documento[0].numero }</td>
+                      
                 <td>{ item.Ticket }</td>
                 <td>
                     <Moment format="DD-MM-YYYY HH:mm:ss">{ item.FechaCreacion }</Moment>

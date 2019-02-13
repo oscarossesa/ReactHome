@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import  TableRow   from "./TableRow";
 
 class Tabla extends Component {
@@ -9,7 +8,8 @@ class Tabla extends Component {
     }
 
     render() {
-        const { items } = this.props;
+        const { items, respuestaSigfe } = this.props;
+
         let i = 1;
 
         return (
@@ -17,6 +17,7 @@ class Tabla extends Component {
                 <table className="table">
                     <thead className="thead-light">
                         <tr>
+                            <th scope="col">Orden de compra</th>
                             <th scope="col">Ticket</th>
                             <th scope="col">Fecha Creaci&oacute;n</th>
                             <th scope="col">Fecha Respuesta</th>

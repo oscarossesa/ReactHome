@@ -1,0 +1,87 @@
+{
+   "cabecera": {
+      "ejercicio": 2018,
+      "periodo": 11,
+      "institucion": {
+         "partida": "08",
+         "capitulo": "04",
+         "areaTransaccional": "099"
+      },
+      "proceso": "0201",
+      "messageID": "1310030342"
+   },
+   "detalles": {
+      "compromiso": [
+         {
+            "id": "211",
+            "titulo": "Orden de Compra 586-942-SE18",
+            "descripcion": "Orden de Compra 586-942-SE18",
+            "documentos": {
+               "documento": [
+                  {
+                     "numero": "586-942-SE18",
+                     "tipo": "1600",
+                     "fecha": "2018-12-27",
+                     "descripcion": "Orden de Compra 586-942-SE18",
+                     "idDocumentoAjustado": null,
+                     "principales": {
+                        "principal": [
+                           {
+                              "id": "96556940-5",
+                              "transaccionesPrevias": {
+                                 "transaccion": [
+                                    {
+                                       "folio": 14,
+                                       "tipo": "01",
+                                       "idCombinacion": "3483749",
+                                       "agrupacionesDeImputacionesACatalogos": {
+                                          "agrupacion": [
+                                             {
+                                                "imputacionesACatalogosDeReagrupacion": {
+                                                   "catalogo": [
+                                                      {
+                                                         "catalogo": "iniciativaInversion",
+                                                         "elemento": "00"
+                                                      }
+                                                   ]
+                                                },
+                                                "imputacionesAConceptosPresupuestarios": {
+                                                   "imputacion": [
+                                                      {
+                                                         "idConcepto": "2204999",
+                                                         "montoFuturo": 0,
+                                                         "saldo": 0,
+                                                         "monto": 1
+                                                      }
+                                                   ]
+                                                }
+                                             }
+                                          ]
+                                       }
+                                    }
+                                 ]
+                              },
+                              "cumplimientos": {
+                                 "cumplimiento": [
+                                    {
+                                       "fecha": "2018-12-31",
+                                       "monto": 1
+                                    }
+                                 ]
+                              }
+                           }
+                        ]
+                     },
+                     "imputacionesAGlosas": null,
+                     "camposVariables": null,
+                     "tipoDeCambio": null,
+                     "monto": 1
+                  }
+               ]
+            },
+            "etapa": "03",
+            "informacionDeAjuste": null
+         }
+      ]
+   }
+}

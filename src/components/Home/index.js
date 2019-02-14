@@ -48,39 +48,50 @@ class Home extends Component {
       //    }
       // ];
 
-      const indicadores = [
-         {
-            "Estado": -2,
-            "Cantidad": 54,
-            "Descripcion": "(-2) - Error!! -- folio generado en Sigfe y no registrado en MP."
-         },
-         {
-            "Estado": 1,
-            "Cantidad": 96,
-            "Descripcion": "(1) - En espera de valdación en Sigfe"
-         },
-         {
-            "Estado": 2,
-            "Cantidad": 345,
-            "Descripcion": "(2) - Con errores de negocio."
-         },
-         {
-            "Estado": 3,
-            "Cantidad": 905,
-            "Descripcion": "(3) - Validado, con folio generado."
-         },
-         {
-            "Estado": 5,
-            "Cantidad": 54,
-            "Descripcion": null
-         }
-      ]
+      // const indicadores = [
+      //    {
+      //       "Estado": -2,
+      //       "Cantidad": 54,
+      //       "Descripcion": "(-2) - Error!! -- folio generado en Sigfe y no registrado en MP."
+      //    },
+      //    {
+      //       "Estado": 1,
+      //       "Cantidad": 96,
+      //       "Descripcion": "(1) - En espera de valdación en Sigfe"
+      //    },
+      //    {
+      //       "Estado": 2,
+      //       "Cantidad": 345,
+      //       "Descripcion": "(2) - Con errores de negocio."
+      //    },
+      //    {
+      //       "Estado": 3,
+      //       "Cantidad": 905,
+      //       "Descripcion": "(3) - Validado, con folio generado."
+      //    },
+      //    {
+      //       "Estado": 5,
+      //       "Cantidad": 54,
+      //       "Descripcion": null
+      //    }
+      // ]
 
-      this.setState({
-         indicadores: indicadores
-      });
+      // this.setState({
+      //    indicadores: indicadores
+      // });
 
       let url = config.api.hostname + "/" + config.api.url;
+      let urlIndicadores = config.api.hostname + "/" + config.api.url + "/getindicadores";
+
+      fetch(urlIndicadores)
+      .then(response => response.json())
+      .then(response => {
+
+         this.setState({
+            indicadores: response
+         });
+
+      });
 
       fetch(url)
          .then(response => response.json())

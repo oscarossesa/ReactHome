@@ -3,7 +3,14 @@ import Moment from 'react-moment';
 
 class Tabla extends Component {
 
-   render() {
+   constructor(...args) {
+      super(...args);
+  
+      this.state = { modalShow: false };
+    }
+
+    
+   render() {      
 
       const filas = this.props.items.map((item) => {
          return (
@@ -18,15 +25,22 @@ class Tabla extends Component {
                            "alert alert-info" : ""}    >
                <td>
                   {/* {columnaOrigen} */}
-                  { (item.RespuestaSigfeJson.detalles && 
+                  {(item.RespuestaSigfeJson.detalles &&
                      item.RespuestaSigfeJson.detalles.compromiso[0].descripcion &&
-                     item.RespuestaSigfeJson.detalles.compromiso[0].descripcion.includes("AJUSTE")) ? "AJUSTE": "COMPROMISO" }
+                     item.RespuestaSigfeJson.detalles.compromiso[0].descripcion.includes("AJUSTE")) ? "AJUSTE" : "COMPROMISO"}
                </td>
                <td>
                   {
                      item.RespuestaSigfeJson.detalles ?
                         item.RespuestaSigfeJson.detalles.compromiso[0].documentos.documento[0].numero :
                         'Sin OC'
+                  }
+               </td>
+               <td>
+                  {
+                     "AT: " + item.RespuestaSigfeJson.cabecera.institucion.areaTransaccional + " " +
+                     "C: " + item.RespuestaSigfeJson.cabecera.institucion.capitulo + " " +
+                     "P: " + item.RespuestaSigfeJson.cabecera.institucion.partida
                   }
                </td>
                <td>{item.Ticket}</td>
@@ -53,6 +67,7 @@ class Tabla extends Component {
                   <tr>
                      <th scope="col">Operación</th>
                      <th scope="col">Orden de compra</th>
+                     <th scope="col">Organismo</th>
                      <th scope="col">Ticket</th>
                      <th scope="col">Fecha Creaci&oacute;n</th>
                      <th scope="col">Fecha Respuesta</th>

@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import Tabla from "../Tabla/Tabla";
 import Indicadores from "../Indicadores"
 
-import { Button, ButtonToolbar } from 'react-bootstrap';
-import MyVerticallyCenteredModal from '../Tabla/MyVerticallyCenteredModal'
+// import { Button, ButtonToolbar } from 'react-bootstrap';
+// import MyVerticallyCenteredModal from '../Tabla/MyVerticallyCenteredModal'
 
 import config from "../../config";
 
@@ -12,9 +12,6 @@ class Home extends Component {
 
    constructor() {
       super();
-
-      console.log('constructor Home');
-
       this.state = {
          items: [],
          indicadores: [],
@@ -25,8 +22,6 @@ class Home extends Component {
    }
 
    componentWillMount() {
-      console.log("componentWillMount() Home");
-
       let url = config.api.hostname + "/" + config.api.url;
       let urlIndicadores = config.api.hostname + "/" + config.api.url + "/getindicadores";
 
